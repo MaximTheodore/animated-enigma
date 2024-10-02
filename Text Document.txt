@@ -1,0 +1,303 @@
+PS D:\Test\test-t-1> git --version
+git version 2.46.2.windows.1
+PS D:\Test\test-t-1> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=MaximTheodore
+user.email=maximtarasenkov2005@mail.ru
+credential.https://gitverse.ru.provider=generic
+PS D:\Test\test-t-1> git config --glogal core.quotePath false
+error: unknown option `glogal'
+usage: git config list [<file-option>] [<display-option>] [--includes]
+   or: git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>
+   or: git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>
+   or: git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name> <value>
+   or: git config rename-section [<file-option>] <old-name> <new-name>
+   or: git config remove-section [<file-option>] <name>
+   or: git config edit [<file-option>]
+   or: git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --get                 get value: name [<value-pattern>]
+    --get-all             get all values: key [<value-pattern>]
+    --get-regexp          get values for regexp: name-regex [<value-pattern>]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [<value-pattern>]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [<value-pattern>]
+    --unset-all           remove all matches: name [<value-pattern>]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [<default>]
+    --get-colorbool       find the color setting: slot [<stdout-is-tty>]
+
+Display options
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]show-names     show config keys in addition to their values
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+    --[no-]comment <value>
+                          human-readable comment string (# will be prepended as needed)
+    --[no-]fixed-value    use string equality when comparing values to value pattern
+    --[no-]includes       respect include directives on lookup
+
+PS D:\Test\test-t-1> git config --global core.quotePath false
+PS D:\Test\test-t-1> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=MaximTheodore
+user.email=maximtarasenkov2005@mail.ru
+credential.https://gitverse.ru.provider=generic
+core.quotepath=false
+PS D:\Test\test-t-1> ls
+PS D:\Test\test-t-1> ls
+
+
+    Каталог: D:\Test\test-t-1                                                                                                                                                                                                                                                                                                                                           Mode                 LastWriteTime         Length Name                                                                  ----                 -------------         ------ ----
+-a----        25.09.2024     12:59              0 Text Document.txt
+
+
+PS D:\Test\test-t-1> git init
+Initialized empty Git repository in D:/Test/test-t-1/.git/
+PS D:\Test\test-t-1> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser –Confirm
+
+Подтверждение
+Вы действительно хотите выполнить это действие?
+Выполнение операции "Set-ExecutionPolicy" над целевым объектом "RemoteSigned".
+[Y] Да - Y  [A] Да для всех - A  [N] Нет - N  [L] Нет для всех - L  [S] Приостановить - S  [?] Справка
+(значением по умолчанию является "Y"):Y
+
+Изменение политики выполнения
+Политика выполнения защищает компьютер от ненадежных сценариев. Изменение политики выполнения может поставить под
+угрозу безопасность системы, как описано в разделе справки, вызываемом командой about_Execution_Policies и
+расположенном по адресу https:/go.microsoft.com/fwlink/?LinkID=135170 . Вы хотите изменить политику выполнения?
+[Y] Да - Y  [A] Да для всех - A  [N] Нет - N  [L] Нет для всех - L  [S] Приостановить - S  [?] Справка
+(значением по умолчанию является "N"):Y
+PS D:\Test\test-t-1> (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/psget/psget/master/GetPsGet.ps1") | iex
+Downloading PsGet from https://github.com/psget/psget/raw/master/PsGet/PsGet.psm1
+PsGet is installed and ready to use
+USAGE:
+    PS> import-module PsGet
+    PS> install-module PsUrl
+
+For more details:
+    get-help install-module
+Or visit http://psget.net
+PS D:\Test\test-t-1> Install-Module posh-git
+>>
+"C:\Users\user6\OneDrive\Документы\WindowsPowerShell\Modules" is added to the PSModulePath environment variable
+Module posh-git was successfully installed.
+D:\Test\test-t-1 [master +1 ~0 -0 !]> Add-PoshGitToProfile -AllHosts
+D:\Test\test-t-1 [master +1 ~0 -0 !]> ls
+
+
+    Каталог: D:\Test\test-t-1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25.09.2024     12:59              0 Text Document.txt
+
+
+D:\Test\test-t-1 [master +1 ~0 -0 !]> git add "Text Document.txt"
+D:\Test\test-t-1 [master +1 ~0 -0 ~]> ls
+
+
+    Каталог: D:\Test\test-t-1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25.09.2024     13:07              0 Text Document (2).txt
+-a----        25.09.2024     12:59              0 Text Document.txt
+
+
+D:\Test\test-t-1 [master +1 ~0 -0 | +1 ~0 -0 !]> git add .
+D:\Test\test-t-1 [master +2 ~0 -0 ~]> git commit -m "new commit
+>> 25/09/2024"
+[master (root-commit) 50f195f] new commit 25/09/2024
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Text Document (2).txt
+ create mode 100644 Text Document.txt
+D:\Test\test-t-1 [master]> git log
+commit 50f195f87affacc67c93ab080fccabc19910a0fa (HEAD -> master)
+Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+Date:   Wed Sep 25 13:10:18 2024 +0300
+
+    new commit
+    25/09/2024
+D:\Test\test-t-1 [master]> git log --name--status
+fatal: unrecognized argument: --name--status
+D:\Test\test-t-1 [master]> git log --name-status
+commit 50f195f87affacc67c93ab080fccabc19910a0fa (HEAD -> master)
+Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+Date:   Wed Sep 25 13:10:18 2024 +0300
+
+    new commit
+    25/09/2024
+
+A       Text Document (2).txt
+A       Text Document.txt
+D:\Test\test-t-1 [master]> git ls-tree --name-only -r master
+Text Document (2).txt
+Text Document.txt
+D:\Test\test-t-1 [master]> ls
+
+
+    Каталог: D:\Test\test-t-1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25.09.2024     13:07              0 Text Document (2).txt
+-a----        25.09.2024     12:59              0 Text Document.txt
+
+
+D:\Test\test-t-1 [master]> git add "Text Document.txt"
+D:\Test\test-t-1 [master]> git rm "Text Document.txt" --cashed
+error: unknown option `cashed'
+usage: git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]
+              [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+              [--] [<pathspec>...]
+
+    -n, --[no-]dry-run    dry run
+    -q, --[no-]quiet      do not list removed files
+    --[no-]cached         only remove from the index
+    -f, --[no-]force      override the up-to-date check
+    -r                    allow recursive removal
+    --[no-]ignore-unmatch exit with a zero status even if nothing matched
+    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+D:\Test\test-t-1 [master]> git rm "Text Document.txt" --cached
+rm 'Text Document.txt'
+D:\Test\test-t-1 [master +0 ~0 -1 | +1 ~0 -0 !]> git config --global core.editor "code --wait"
+D:\Test\test-t-1 [master +0 ~0 -1 | +1 ~0 -0 !]> git add .
+D:\Test\test-t-1 [master]> git commit
+On branch master
+nothing to commit, working tree clean
+D:\Test\test-t-1 [master]> git config --global core.editor "code --wait"
+D:\Test\test-t-1 [master]> git add .
+D:\Test\test-t-1 [master]> git commit -m "mmm"
+On branch master
+nothing to commit, working tree clean
+D:\Test\test-t-1 [master]> git init
+Reinitialized existing Git repository in D:/Test/test-t-1/.git/
+D:\Test\test-t-1 [master]> git add /
+fatal: /: '/' is outside repository at 'D:/Test/test-t-1'
+D:\Test\test-t-1 [master]> git add .
+D:\Test\test-t-1 [master]> ls
+
+
+    Каталог: D:\Test\test-t-1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        25.09.2024     13:07              0 Text Document (2).txt
+-a----        25.09.2024     12:59              0 Text Document.txt
+
+
+D:\Test\test-t-1 [master]> git commit -m "df"
+On branch master
+nothing to commit, working tree clean
+D:\Test\test-t-1 [master]> git log
+commit 50f195f87affacc67c93ab080fccabc19910a0fa (HEAD -> master)
+Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+Date:   Wed Sep 25 13:10:18 2024 +0300
+
+    new commit
+    25/09/2024
+D:\Test\test-t-1 [master]> git reset --soft 50f195f87affacc67c93ab080fccabc19910a0fa
+D:\Test\test-t-1 [master]> git log
+commit 50f195f87affacc67c93ab080fccabc19910a0fa (HEAD -> master)
+Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+Date:   Wed Sep 25 13:10:18 2024 +0300
+
+    new commit
+    25/09/2024
+D:\Test\test-t-1 [master]> git log --all --graph --reflog
+* commit 50f195f87affacc67c93ab080fccabc19910a0fa (HEAD -> master)
+  Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+  Date:   Wed Sep 25 13:10:18 2024 +0300
+
+      new commit
+      25/09/2024
+D:\Test\test-t-1 [master]> git commit -m "soft"
+On branch master
+nothing to commit, working tree clean
+D:\Test\test-t-1 [master]>
+D:\Test\test-t-1 [master +0 ~1 -0 !]>
+D:\Test\test-t-1 [master +0 ~1 -0 !]>
+D:\Test\test-t-1 [master +0 ~1 -0 !]> git add .
+D:\Test\test-t-1 [master +0 ~1 -0 ~]> git commit -m "soft"
+[master 5834ff1] soft
+ 1 file changed, 1 insertion(+)
+D:\Test\test-t-1 [master]> git log --all --graph -- reflog
+D:\Test\test-t-1 [master]> git log --all --graph --reflog
+* commit 5834ff1a3cb712856aa89d2a742d021ab4a5f9c9 (HEAD -> master)
+| Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+| Date:   Wed Sep 25 13:27:04 2024 +0300
+|
+|     soft
+|
+* commit 50f195f87affacc67c93ab080fccabc19910a0fa
+  Author: MaximTheodore <maximtarasenkov2005@mail.ru>
+  Date:   Wed Sep 25 13:10:18 2024 +0300
+
+      new commit
+      25/09/2024
+D:\Test\test-t-1 [master]>
